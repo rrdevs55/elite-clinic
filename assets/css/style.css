@@ -1248,7 +1248,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 .theme-btn:hover i {
-  transform: rotate(40deg);
+  transform: rotate(-40deg);
 }
 .theme-btn.white-blur {
   border-radius: 40.037px;
