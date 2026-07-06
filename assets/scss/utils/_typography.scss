@@ -1,0 +1,150 @@
+/* === Font Family scss (index 01) === */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url('/assets/fonts/ClashGrotesk-Regular.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url('/assets/fonts/ClashGrotesk-Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: "PPFragment";
+  src: url('/assets/fonts/PPFragment-TextRegular.otf');
+  font-weight: 400;
+}
+
+/* === Font Variable scss (index 03) === */
+:root {
+  --font_inter: "Inter", sans-serif;
+  --font_manrope: "Manrope", sans-serif;
+  --font_raleway: "Raleway", sans-serif;
+  --font_clashgrotesk: "ClashGrotesk";
+  --font_ppfragment: "PPFragment";
+  --font_awesome: 'Font Awesome 6 Pro';
+}
+
+/* === Defalut Style scss (index 03) === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--body-bg);
+  font-family: var(--font_inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  color: var(--secondary);
+  line-height: 1.22;
+  font-weight: 500;
+  font-family: var(--font_raleway);
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+  &:hover {
+    color: var(--primary-2);
+  }
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+video,
+iframe,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* === Gutter scss (index 03) === */
+@media #{$sm} {
+  .g-0 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .row.g-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
