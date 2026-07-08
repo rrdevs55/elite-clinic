@@ -717,7 +717,7 @@
     &__download {
         background: #E7F0FB;
         border-radius: 15px;
-        padding: 30px;
+        padding: 23px 30px 29px 30px;
 
         .content {
             .title {
@@ -735,6 +735,102 @@
                 line-height: 24px;
                 color: rgba(17, 17, 17, 0.7);
                 max-width: 305px;
+            }
+        }
+    }
+
+    &__qr {
+        width: 96px;
+    }
+
+    &__app {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 23px;
+    }
+
+    &__details {
+        .title {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            color: rgba(17, 17, 17, 0.5);
+            margin-bottom: 17px;
+            font-family: var(--font_inter);
+        }
+    }
+
+    &__brand {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    &__departments {
+        background: #E7F0FB;
+        border-radius: 15px;
+        padding: 25px 30px 20px 30px;
+
+        .title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: var(--secondary);
+            font-family: var(--font_inter);
+        }
+        .departments-btn{
+            margin-top: 25px;
+            .rr-btn-primary{
+                padding: 0;
+                background: transparent;
+                align-items: center;
+                gap: 8px;
+                .text{
+                    span{
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 40px;
+                        letter-spacing: -0.54px;
+                        color: var(--secondary);
+                    }
+                }
+                i{
+                    font-size: 18px;
+                }
+                &:hover{
+                    .text{
+                        span{
+                            color: var(--secondary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        li {
+            list-style: none;
+            a {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 40px;
+                letter-spacing: -0.48px;
+                color: var(--secondary);
+                border-radius: 30px;
+                background: var(--white);
+                padding: 8.5px 30px;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background: var(--primary);
+                    color: var(--white);
+                }
             }
         }
     }

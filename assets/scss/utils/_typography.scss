@@ -1,6 +1,6 @@
 /* === Font Family scss (index 01) === */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Marcellus&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
@@ -23,8 +23,10 @@
 /* === Font Variable scss (index 03) === */
 :root {
   --font_inter: "Inter", sans-serif;
+  --font_dm-sans: "DM Sans", sans-serif;
   --font_manrope: "Manrope", sans-serif;
   --font_raleway: "Raleway", sans-serif;
+  --font_marcellus:"Marcellus", serif;
   --font_clashgrotesk: "ClashGrotesk";
   --font_ppfragment: "PPFragment";
   --font_awesome: 'Font Awesome 6 Pro';

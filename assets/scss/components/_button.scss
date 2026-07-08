@@ -91,6 +91,30 @@
   }
 }
 
+.rr-btn-2 {
+  background: #68511E;
+  border-radius: 12px;
+  padding: 19px 20px;
+  .btn-wrap {
+      .text-one {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 100%;
+          text-transform: capitalize;
+          color: var(--white);
+          font-family: var(--font_dm-sans);
+      }
+      .text-two{
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 100%;
+          text-transform: capitalize;
+          color: var(--white);
+          font-family: var(--font_dm-sans);
+      }
+  }
+}
+
 .theme-btn {
   position: relative;
   z-index: 2;

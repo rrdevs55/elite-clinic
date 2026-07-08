@@ -73,9 +73,11 @@
     &__wrapper {
         text-align: center;
         margin-bottom: 53px;
+
         @media #{$sm} {
             margin-bottom: 30px;
         }
+
         .title {
             font-weight: 500;
             font-size: 64px;
@@ -83,22 +85,89 @@
             letter-spacing: -1.92px;
             color: var(--secondary);
             font-family: var(--font_inter);
+
             @media #{$sm} {
                 font-size: 48px;
                 line-height: 57px;
-                & br{
+
+                & br {
                     display: none;
                 }
             }
+
             @media #{$xs} {
                 font-size: 30px;
                 line-height: 38px;
             }
+
             span {
                 font-weight: 400;
                 color: var(--primary);
                 font-family: var(--font_ppfragment);
             }
+        }
+    }
+}
+
+// section-title-4 css
+.section-title-4 {
+    &__wrapper {
+        margin-bottom: 60px;
+        text-align: center;
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+        .title {
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: -1.8px;
+            color: var(--secondary);
+            font-family: var(--font_marcellus);
+            @media #{$md} {
+                font-size: 50px;
+                line-height: 57px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @media #{$xs} {
+                font-size: 28px;
+                line-height: 36px;
+                letter-spacing: -.8px;
+            }
+        }
+    }
+
+    &__sub-title {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 23px;
+        @media #{$lg} {
+            margin-bottom: 15px;
+        }
+        .icon {
+            width: 25px;
+            height: 37px;
+            background: #F2F3EE;
+            border-radius: 12.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sub-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: -0.48px;
+            color: var(--secondary);
+            font-family: var(--font_dm-sans);
+            background: #F2F3EE;
+            border-radius: 21.5px;
+            padding: 3.5px 20.5px;
         }
     }
 }

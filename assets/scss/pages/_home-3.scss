@@ -111,7 +111,7 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
             margin-bottom: 19px;
             transition: all .3s ease-in-out;
 
@@ -295,7 +295,7 @@
             font-size: 18px;
             line-height: 28px;
             letter-spacing: -0.36px;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
         }
     }
 }
@@ -444,7 +444,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.32px;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
         }
     }
 
@@ -581,7 +581,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: -0.32px;
-                color: rgba(17, 17, 17, 0.7);
+                color: var(--body-bg);
             }
         }
     }
@@ -829,7 +829,7 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 19px;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
             border: 1px solid rgba(17, 17, 17, 0.1);
             border-radius: 31.5px;
             padding: 20px 40px;
@@ -927,7 +927,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.03em;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
         }
     }
 }
@@ -979,7 +979,7 @@
             font-size: 16px;
             line-height: 28px;
             letter-spacing: -0.32px;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
             font-family: var(--font_inter);
         }
     }
@@ -1028,7 +1028,7 @@
             font-size: 18px;
             line-height: 28px;
             letter-spacing: -0.02em;
-            color: rgba(17, 17, 17, 0.7);
+            color: var(--body-bg);
             max-width: 642px;
             margin-bottom: 32px;
         }

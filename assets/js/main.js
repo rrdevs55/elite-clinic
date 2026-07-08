@@ -296,6 +296,61 @@
 
 
 
+  $(function () {
+		let pricingMonthlyBtn = $("#Monthly"),
+			pricingYearlyBtn = $("#Annually"),
+			pricingSwitch = $("#checkbox"),
+			pricingValues = $(".pricing-4__price h2");
+
+		// --- Click by text buttons (Monthly / Annually) ---
+		if (pricingMonthlyBtn.length && pricingYearlyBtn.length && pricingValues.length) {
+			pricingMonthlyBtn.on("click", function () {
+				updatePricingValues("monthly");
+				pricingMonthlyBtn.addClass("active");
+				pricingYearlyBtn.removeClass("active");
+				pricingSwitch.prop("checked", false);
+			});
+
+			pricingYearlyBtn.on("click", function () {
+				updatePricingValues("yearly");
+				pricingYearlyBtn.addClass("active");
+				pricingMonthlyBtn.removeClass("active");
+				pricingSwitch.prop("checked", true);
+			});
+		}
+
+		// --- Checkbox toggle ---
+		if (pricingSwitch.length && pricingValues.length) {
+			pricingSwitch.on("change", function () {
+				if (pricingSwitch.is(":checked")) {
+					updatePricingValues("yearly");
+					pricingYearlyBtn.addClass("active");
+					pricingMonthlyBtn.removeClass("active");
+				} else {
+					updatePricingValues("monthly");
+					pricingMonthlyBtn.addClass("active");
+					pricingYearlyBtn.removeClass("active");
+				}
+			});
+		}
+
+		// --- Function to update all pricing values ---
+		function updatePricingValues(option) {
+			pricingValues.each(function () {
+				const pricingValue = $(this);
+				const yearlyValue = pricingValue.attr("data-Annually");
+				const monthlyValue = pricingValue.attr("data-Monthly");
+
+				const newValue = option === "monthly" ? monthlyValue : yearlyValue;
+
+				// ছোট fade transition effect for smooth change
+				pricingValue.fadeOut(150, function () {
+					pricingValue.html(newValue).fadeIn(150);
+				});
+			});
+		}
+	});
+
 
 
 
