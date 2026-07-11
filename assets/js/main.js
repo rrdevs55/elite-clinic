@@ -297,59 +297,55 @@
 
 
   $(function () {
-		let pricingMonthlyBtn = $("#Monthly"),
-			pricingYearlyBtn = $("#Annually"),
-			pricingSwitch = $("#checkbox"),
-			pricingValues = $(".pricing-4__price h2");
+    let pricingMonthlyBtn = $("#Monthly"),
+      pricingYearlyBtn = $("#Annually"),
+      pricingSwitch = $("#checkbox"),
+      pricingValues = $(".pricing-4__price h2");
 
-		// --- Click by text buttons (Monthly / Annually) ---
-		if (pricingMonthlyBtn.length && pricingYearlyBtn.length && pricingValues.length) {
-			pricingMonthlyBtn.on("click", function () {
-				updatePricingValues("monthly");
-				pricingMonthlyBtn.addClass("active");
-				pricingYearlyBtn.removeClass("active");
-				pricingSwitch.prop("checked", false);
-			});
+    // --- Click by text buttons (Monthly / Annually) ---
+    if (pricingMonthlyBtn.length && pricingYearlyBtn.length && pricingValues.length) {
+      pricingMonthlyBtn.on("click", function () {
+        updatePricingValues("monthly");
+        pricingMonthlyBtn.addClass("active");
+        pricingYearlyBtn.removeClass("active");
+        pricingSwitch.prop("checked", false);
+      });
 
-			pricingYearlyBtn.on("click", function () {
-				updatePricingValues("yearly");
-				pricingYearlyBtn.addClass("active");
-				pricingMonthlyBtn.removeClass("active");
-				pricingSwitch.prop("checked", true);
-			});
-		}
+      pricingYearlyBtn.on("click", function () {
+        updatePricingValues("yearly");
+        pricingYearlyBtn.addClass("active");
+        pricingMonthlyBtn.removeClass("active");
+        pricingSwitch.prop("checked", true);
+      });
+    }
 
-		// --- Checkbox toggle ---
-		if (pricingSwitch.length && pricingValues.length) {
-			pricingSwitch.on("change", function () {
-				if (pricingSwitch.is(":checked")) {
-					updatePricingValues("yearly");
-					pricingYearlyBtn.addClass("active");
-					pricingMonthlyBtn.removeClass("active");
-				} else {
-					updatePricingValues("monthly");
-					pricingMonthlyBtn.addClass("active");
-					pricingYearlyBtn.removeClass("active");
-				}
-			});
-		}
+    // --- Checkbox toggle ---
+    if (pricingSwitch.length && pricingValues.length) {
+      pricingSwitch.on("change", function () {
+        if (pricingSwitch.is(":checked")) {
+          updatePricingValues("yearly");
+          pricingYearlyBtn.addClass("active");
+          pricingMonthlyBtn.removeClass("active");
+        } else {
+          updatePricingValues("monthly");
+          pricingMonthlyBtn.addClass("active");
+          pricingYearlyBtn.removeClass("active");
+        }
+      });
+    }
+    function updatePricingValues(option) {
+      pricingValues.each(function () {
+        const pricingValue = $(this);
+        const yearlyValue = pricingValue.attr("data-Annually");
+        const monthlyValue = pricingValue.attr("data-Monthly");
 
-		// --- Function to update all pricing values ---
-		function updatePricingValues(option) {
-			pricingValues.each(function () {
-				const pricingValue = $(this);
-				const yearlyValue = pricingValue.attr("data-Annually");
-				const monthlyValue = pricingValue.attr("data-Monthly");
-
-				const newValue = option === "monthly" ? monthlyValue : yearlyValue;
-
-				// ছোট fade transition effect for smooth change
-				pricingValue.fadeOut(150, function () {
-					pricingValue.html(newValue).fadeIn(150);
-				});
-			});
-		}
-	});
+        const newValue = option === "monthly" ? monthlyValue : yearlyValue;
+        pricingValue.fadeOut(150, function () {
+          pricingValue.html(newValue).fadeIn(150);
+        });
+      });
+    }
+  });
 
 
 
@@ -483,6 +479,109 @@
       disableOnInteraction: true,
     }
   });
+
+  // brand slider
+  var swiper = new Swiper(".instagram-4__slider", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    centeredSlides: true,
+    freemode: true,
+    centeredSlides: true,
+    loop: true,
+    speed: 10000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true,
+    }
+  });
+
+  // our-treatment-4 
+  const items = document.querySelectorAll(".our-treatment-4__item");
+  const image = document.querySelector(".our-treatment-4__thumb .image");
+  
+  items.forEach(item => {
+  
+    item.addEventListener("click", function () {
+      items.forEach(i => i.classList.remove("active"));
+      this.classList.add("active");
+  
+      const newImg = this.getAttribute("data-img");
+      image.style.animation = "none";
+  
+      setTimeout(() => {
+        image.src = newImg;
+        image.style.animation = "fadeSimple 0.4s ease";
+      }, 50);
+  
+    });
+  
+  });
+
+
+  var work_section_active = new Swiper(".advanced-5__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+
+      1400: {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+
+  var work_section_active = new Swiper(".our-experts-5__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".our-experts-5-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+
+      1400: {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
 
 })(jQuery);
 
