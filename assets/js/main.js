@@ -581,7 +581,113 @@
       },
     },
   });
+  var service_5__active = new Swiper(".service-5__active", {
+    spaceBetween: 20,
+    loop: true,
+    // autoplay: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".our-experts-5-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 2,
+      },
+      1400: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+    },
+  });
 
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const minRange = document.getElementById('minRange');
+    const maxRange = document.getElementById('maxRange');
+    const minInput = document.getElementById('minInput');
+    const maxInput = document.getElementById('maxInput');
+    const fill = document.getElementById('rangeFill');
+    const MAX = 5000;
+
+    if (!minRange || !maxRange || !minInput || !maxInput || !fill) return;
+
+    function updateFill() {
+      fill.style.left = (minRange.value / MAX * 100) + '%';
+      fill.style.right = (100 - maxRange.value / MAX * 100) + '%';
+    }
+
+    minRange.addEventListener('input', function () {
+      if (+this.value > +maxRange.value - 10) this.value = +maxRange.value - 10;
+      minInput.value = this.value;
+      updateFill();
+    });
+
+    maxRange.addEventListener('input', function () {
+      if (+this.value < +minRange.value + 10) this.value = +minRange.value + 10;
+      maxInput.value = this.value;
+      updateFill();
+    });
+
+    minInput.addEventListener('change', function () {
+      minRange.value = this.value;
+      updateFill();
+    });
+
+    maxInput.addEventListener('change', function () {
+      maxRange.value = this.value;
+      updateFill();
+    });
+
+    updateFill();
+  });
+
+
+    // progress-outer
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".progress-outer");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const outer = entry.target;
+  
+              const bar = outer.querySelector(".progress-bar");
+              const num = outer.querySelector(".progress-num");
+  
+              const value = bar.dataset.width;
+  
+              // text set
+              num.textContent = value + "%";
+  
+              // animate bar
+              bar.style.width = value + "%";
+  
+              // animate number position
+              num.style.left = value + "%";
+  
+              observer.unobserve(outer); // ekbar animate hole ar na
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+  
+      items.forEach((item) => observer.observe(item));
+    });
 
 })(jQuery);
 

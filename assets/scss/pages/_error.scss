@@ -1,0 +1,94 @@
+.error__content {
+    text-align: center;
+
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.54px;
+        color: #757972;
+        margin-top: 35px;
+
+    }
+
+    .input-search {
+        margin-top: 26px;
+        margin-bottom: 60px;
+        position: relative;
+
+        @media #{$sm} {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        input {
+            width: 100%;
+            outline: none;
+            height: 60px;
+            border-radius: 0;
+            padding-left: 20px;
+            padding-right: 60px;
+            background: transparent;
+            border: 1px solid rgba(36, 44, 23, 0.3);
+            border-radius: 5px;
+
+            @media #{$xs} {
+                padding-left: 10px;
+            }
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                color: var(--body-text);
+                letter-spacing: -0.54px;
+            }
+        }
+
+        .search-btn {
+            top: 50%;
+            right: 6px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            border-radius: 5px;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            background: #2F80ED;
+            transform: translateY(-50%);
+        }
+    }
+
+    .rr-btn-primary {
+        gap: 144px;
+        border: none;
+        border-radius: 40px;
+        padding: 22px 23px;
+        color: var(--white);
+        background: #2F80ED;
+
+        @media #{$sm} {
+            gap: 30px;
+            padding: 17px 19px;
+        }
+
+        .text {
+            span {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: -0.48px;
+                color: #FBF9F6;
+            }
+        }
+
+        i {
+            color: #FBF9F6;
+        }
+
+
+    }
+}
