@@ -1237,6 +1237,7 @@
         justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         padding: 0 40px;
+
         @media #{$lg} {
             height: 80px;
         }
@@ -1269,6 +1270,7 @@
         color: var(--white);
         padding: 30px 15px;
         font-family: var(--font_dm-sans);
+
         &:hover {
             color: var(--primary);
         }
@@ -1299,7 +1301,8 @@
             color: var(--white);
             font-family: var(--font_dm-sans);
             transition: all .3s ease-in-out;
-            &:hover{
+
+            &:hover {
                 color: var(--primary);
             }
         }
@@ -1348,6 +1351,115 @@
                         font-weight: 300;
                     }
                 }
+            }
+        }
+    }
+
+}
+
+// header-area-2
+.header-inner {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    @media #{$sm} {
+        top: 10px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        justify-content: space-between;
+        padding: 0 50px;
+        @media #{$xl} {
+            padding: 0 15px;
+        }
+        @media #{$lg} {
+            height: 80px;
+        }
+
+    }
+
+    &__box {
+        display: inline-flex;
+        gap: 203px;
+        align-items: center;
+
+        @media #{$xl} {
+            gap: 60px;
+        }
+    }
+
+
+
+    .sticky,
+    .transformed {
+        background-color: #FCF7F3;
+    }
+
+
+    .main-menu li a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgb(255, 255, 255, 70%);
+        padding: 17px 15px;
+        font-family: var(--font_manrope);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    &__navicon {
+        display: flex;
+        background: var(--white);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        @media #{$lg} {
+            display: inherit;
+        }
+    }
+
+
+    &__button {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+
+        .theme-btn {
+            padding: 10px 10px 10px 36px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 25px;
+            color: var(--white);
+            font-family: var(--font_manrope);
+            span {
+                background: var(--white);
+                border-radius: 100px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--secondary);
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(-40deg);
+                }
+            }
+            @media #{$sm} {
+                display: none;
             }
         }
     }

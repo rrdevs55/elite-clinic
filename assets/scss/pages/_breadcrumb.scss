@@ -1,0 +1,87 @@
+// breadcrumb-section css
+
+.breadcrumb-section {
+    &__wrapper {
+        padding-top: 322px;
+        padding-bottom: 118px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        @media #{$xl} {
+            padding-top: 200px;
+            padding-bottom: 118px
+        }
+        @media #{$md} {
+            padding-top: 170px;
+            padding-bottom: 70px;
+        }
+        @media #{$xs} {
+            padding-top: 130px;
+            padding-bottom: 60px;
+        }
+        &::before { 
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(17, 17, 17, 0.5);
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        .title {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 74px;
+            letter-spacing: -0.03em;
+            color: var(--white);
+            font-family: var(--font_raleway);
+            margin-top: 19px;
+            margin-bottom: 13px;
+            @media #{$sm} {
+                font-size: 48px;
+                line-height: 57px;
+                margin-top: 15px;
+            }
+            @media #{$xs} {
+                font-size: 38px;
+                line-height: 46px;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            justify-content: center;
+
+            li {
+                list-style: none;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.03em;
+                color: var(--white);
+                font-family: var(--font_inter);
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: rgba(255, 255, 255, 0.6);
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}

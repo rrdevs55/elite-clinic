@@ -1,21 +1,10 @@
 .doctor-details {
-    &__wrapper {
-        padding-top: 230px;
-
-        @media #{$lg} {
-            padding-top: 160px;
-        }
-
-        @media #{$xs} {
-            padding-top: 110px;
-        }
-    }
 
     &__inner {
         display: grid;
         grid-template-columns: 1fr 550px;
         gap: 100px;
-        margin-bottom: 70px;
+        margin-bottom: 48px;
 
         @media #{$xl} {
             gap: 75px;
@@ -24,7 +13,6 @@
         @media #{$lg} {
             gap: 35px;
             grid-template-columns: 1fr 460px;
-            margin-bottom: 65px;
         }
 
         @media #{$md} {
@@ -35,11 +23,11 @@
         @media #{$sm} {
             gap: 40px;
             grid-template-columns: 1fr;
-            margin-bottom: 60px;
         }
     }
 
     &__content {
+        margin-top: 20px;
         .details {
             margin-bottom: 37px;
 
@@ -57,19 +45,10 @@
                 margin-bottom: 3px;
 
                 @media #{$lg} {
-                    font-size: 46px;
-                    line-height: 57px;
+                    font-size: 35px;
+                    line-height: 42px;
                 }
 
-                @media #{$md} {
-                    font-size: 40px;
-                    line-height: 50px;
-                }
-
-                @media #{$sm} {
-                    font-size: 55px;
-                    line-height: 55px;
-                }
 
                 @media #{$xs} {
                     font-size: 32px;
@@ -105,7 +84,7 @@
     }
 
     &__social {
-        margin-top: 53px;
+        margin-top: 48px;
 
         @media #{$lg} {
             margin-top: 35px;
@@ -150,8 +129,9 @@
 
     &__thumb {
         height: fit-content;
-        @media #{$md} {
+        @media #{$sm} {
             max-height: 600px;
+            height: 100%;
         }
 
         @media #{$xs} {
@@ -172,13 +152,13 @@
 
     &__experience {
         .title {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 44px;
             line-height: 54px;
             text-transform: capitalize;
             color: #04030A;
-            font-family: var(--font_kanit);
-            margin-bottom: 27px;
+            font-family: var(--font_raleway);
+            margin-bottom: 24px;
         }
 
         & ul {
@@ -196,20 +176,19 @@
     }
 
     &__progress {
-        margin-top: 55px;
-        margin-bottom: 60px;
+        margin-top: 61px;
 
         @media #{$md} {
-            margin: 40px 0;
+            margin-top: 30px;
         }
 
         .title {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 44px;
             line-height: 54px;
             text-transform: capitalize;
             color: #04030A;
-            font-family: var(--font_kanit);
+            font-family: var(--font_raleway);
             margin-bottom: 25px;
         }
 
@@ -217,14 +196,14 @@
             width: 100%;
 
             label {
-                margin-bottom: 13px;
-                font-weight: 400;
+                margin-bottom: 11px;
+                font-weight: 500;
                 font-size: 18px;
                 line-height: 28px;
                 text-transform: capitalize;
                 color: #04030A;
                 opacity: 0.6;
-                font-family: var(--font_kanit);
+                font-family: var(--font_inter);
 
                 @media #{$xs} {
                     font-size: 14px;
@@ -236,18 +215,18 @@
                 position: relative;
 
                 .progress-num {
-                    top: -42px;
+                    top: -38px;
                     display: flex;
-                    font-weight: 400;
+                    font-weight: 500;
                     font-size: 18px;
                     line-height: 28px;
                     text-transform: capitalize;
                     color: #04030A;
-                    opacity: 0.6;
+                    opacity: 0.6;                    
                     position: absolute;
                     align-items: center;
                     justify-content: end;
-                    font-family: var(--font_kanit);
+                    font-family: var(--font_inter);
                     position: absolute;
                     transform: translateX(-50%);
 
@@ -260,7 +239,7 @@
 
                     .progress-bar {
                         color: var(--white);
-                        background: #FF5E14;
+                        background: #2F80ED;
                         border-radius: 6px;
                     }
                 }
@@ -270,14 +249,14 @@
         .progress {
             width: 100%;
             height: 10px;
-            background: red;
+            background: #2F80ED;
             border-radius: 50px;
             overflow: hidden;
 
             .progress-bar {
                 height: 100%;
                 width: 0%;
-                background: var(red);
+                background: #2F80ED;
                 border-radius: 50px;
                 transition: width 1.3s ease;
             }

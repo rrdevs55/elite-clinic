@@ -1,0 +1,188 @@
+// blog-page css
+
+.blog-page {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 345px 1fr;
+        gap: 20px;
+        background: #E7F0FB;
+        border-radius: 20px;
+        padding: 20px;
+
+        @media #{$xxl} {
+            grid-template-columns: 300px 1fr;
+        }
+
+        @media #{$xl} {
+            grid-template-columns: 230px 1fr;
+        }
+
+        @media #{$lg} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            padding: 20px 10px;
+        }
+
+        &:hover {
+            .blog-page {
+                &__thumb {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &__thumb {
+        border-radius: 15px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &__content {
+        margin-top: 16px;
+
+        @media #{$lg} {
+            margin-top: 0;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            color: var(--secondary);
+            font-family: var(--font_raleway);
+            margin-bottom: 9px;
+
+            @media #{$xxl} {
+                font-size: 26px;
+                line-height: 35px;
+            }
+
+            @media #{$sm} {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        .decs {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: rgba(17, 17, 17, 0.7);
+            font-family: var(--font_manrope);
+            max-width: 318px;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 7px;
+        flex-wrap: wrap;
+
+        @media #{$sm} {
+            gap: 10px;
+        }
+
+        & li {
+            list-style: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: rgba(17, 17, 17, 0.7);
+
+            i {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 32px;
+
+        @media #{$md} {
+            margin-top: 15px;
+        }
+
+        .rr-btn-primary {
+            background: transparent;
+            padding: 0;
+
+            svg {
+                transition: all 0.3s;
+            }
+
+            &:hover {
+
+                .text {
+                    span {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: var(--secondary);
+
+                    }
+                }
+
+                svg {
+                    opacity: 0;
+                    color: var(--primary);
+                    transform: translateX(100%);
+                }
+            }
+        }
+    }
+
+    .blog-pagination {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 70px;
+        flex-wrap: wrap;
+        @media #{$md} {
+            margin-top: 40px;
+        }
+        a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(17, 17, 17, 0.12);
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            transition: all .3s ease-in-out;
+            &:hover{
+                background: var(--primary);
+                color: var(--white);
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
