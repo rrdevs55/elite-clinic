@@ -129,9 +129,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  mix-blend-mode: exclusion;
-  background-color: var(--black);
-  color: var(--primary);
+  color: var(--white);
 }
 
 .progress-wrap::after {
@@ -141,7 +139,7 @@
   text-align: center;
   line-height: 46px;
   font-size: 20px;
-  color: var(--primary);
+  color: var(--white);
   left: 0;
   top: 0;
   height: 46px;
@@ -159,7 +157,7 @@
 }
 
 .progress-wrap svg.progress-circle path {
-  fill: var(--white);
+  fill: var(--primary);
   stroke: transparent;
   stroke-width: 5;
   box-sizing: border-box;
