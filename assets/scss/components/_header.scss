@@ -1419,7 +1419,7 @@
 
     &__navicon {
         display: flex;
-        background: var(--white);
+        background: #2F80ED;
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -1466,7 +1466,31 @@
             }
         }
     }
+    &-2{
+        .main-menu li a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgb(17, 17, 17, 70%);
+            padding: 17px 15px;
+            font-family: var(--font_manrope);
+    
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+    .bar-icon {
+        span {
+            width: 100%;
+            height: 2px;
+            display: inline-block;
+            background: var(--white);
+            transition: color 0.2s ease-out;
+    
+        }
 
+    }
 }
 
 /* === Icon draw scss (index 01) === */

@@ -52,8 +52,8 @@
                 margin-top: 15px;
             }
             @media #{$xs} {
-                font-size: 38px;
-                line-height: 46px;
+                font-size: 32px;
+                line-height: 42px;
             }
         }
 
@@ -62,7 +62,7 @@
             align-items: center;
             gap: 13px;
             justify-content: center;
-
+            flex-wrap: wrap;
             li {
                 list-style: none;
                 font-weight: 500;

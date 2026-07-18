@@ -499,23 +499,23 @@
   // our-treatment-4 
   const items = document.querySelectorAll(".our-treatment-4__item");
   const image = document.querySelector(".our-treatment-4__thumb .image");
-  
+
   items.forEach(item => {
-  
+
     item.addEventListener("click", function () {
       items.forEach(i => i.classList.remove("active"));
       this.classList.add("active");
-  
+
       const newImg = this.getAttribute("data-img");
       image.style.animation = "none";
-  
+
       setTimeout(() => {
         image.src = newImg;
         image.style.animation = "fadeSimple 0.4s ease";
       }, 50);
-  
+
     });
-  
+
   });
 
 
@@ -584,7 +584,7 @@
   var service_5__active = new Swiper(".service-5__active", {
     spaceBetween: 20,
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 2000,
     navigation: {
       nextEl: ".rr-button-next",
@@ -607,6 +607,34 @@
       1400: {
         slidesPerView: 3,
         slidesPerGroup: 1,
+      },
+    },
+  });
+
+
+  var core_specialists__active = new Swiper(".core-specialists__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+    slidesPerView: 2,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".our-experts-5-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      1400: {
+        slidesPerView: 2,
       },
     },
   });
@@ -654,40 +682,52 @@
   });
 
 
-    // progress-outer
+  // progress-outer
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const items = document.querySelectorAll(".progress-outer");
-  
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const outer = entry.target;
-  
-              const bar = outer.querySelector(".progress-bar");
-              const num = outer.querySelector(".progress-num");
-  
-              const value = bar.dataset.width;
-  
-              // text set
-              num.textContent = value + "%";
-  
-              // animate bar
-              bar.style.width = value + "%";
-  
-              // animate number position
-              num.style.left = value + "%";
-  
-              observer.unobserve(outer); // ekbar animate hole ar na
-            }
-          });
-        },
-        { threshold: 0.3 }
-      );
-  
-      items.forEach((item) => observer.observe(item));
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".progress-outer");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const outer = entry.target;
+
+            const bar = outer.querySelector(".progress-bar");
+            const num = outer.querySelector(".progress-num");
+
+            const value = bar.dataset.width;
+
+            // text set
+            num.textContent = value + "%";
+
+            // animate bar
+            bar.style.width = value + "%";
+
+            // animate number position
+            num.style.left = value + "%";
+
+            observer.unobserve(outer); // ekbar animate hole ar na
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  });
+
+
+      /* image compare js ***/
+      var ctrl = jQuery('.filter__container .comparison-ctrl');
+      var pic_right = jQuery('.filter__container .pic--right');
+      Draggable.create(ctrl, {
+          bounds: ctrl.parent(),
+          type: "x",
+          onDrag: function () {
+              pic_right.css('left', 'calc(50% + ' + (this.x - 2) + 'px)');
+          }
+      });
 
 })(jQuery);
 
