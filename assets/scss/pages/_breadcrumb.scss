@@ -8,19 +8,23 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+
         @media #{$xl} {
             padding-top: 200px;
             padding-bottom: 118px
         }
+
         @media #{$md} {
             padding-top: 170px;
             padding-bottom: 70px;
         }
+
         @media #{$xs} {
             padding-top: 130px;
             padding-bottom: 60px;
         }
-        &::before { 
+
+        &::before {
             position: absolute;
             content: '';
             left: 0;
@@ -46,15 +50,27 @@
             font-family: var(--font_raleway);
             margin-top: 19px;
             margin-bottom: 13px;
+
             @media #{$sm} {
                 font-size: 48px;
                 line-height: 57px;
                 margin-top: 15px;
             }
+
             @media #{$xs} {
                 font-size: 32px;
                 line-height: 42px;
             }
+        }
+
+        .decs {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 460px;
+            margin: 0 auto;
+            margin-bottom: 25px;
         }
 
         ul {
@@ -63,6 +79,7 @@
             gap: 13px;
             justify-content: center;
             flex-wrap: wrap;
+
             li {
                 list-style: none;
                 font-weight: 500;
@@ -71,13 +88,15 @@
                 letter-spacing: -0.03em;
                 color: var(--white);
                 font-family: var(--font_inter);
-                a{
+
+                a {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     color: rgba(255, 255, 255, 0.6);
                     transition: all .3s ease-in-out;
-                    &:hover{
+
+                    &:hover {
                         color: var(--white);
                     }
                 }

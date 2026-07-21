@@ -128,6 +128,16 @@
         @media #{$xs} {
             grid-template-columns: repeat(1, 1fr);
         }
+        .media{
+            overflow: hidden;
+            border-radius: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
     }
 
     &__features {
@@ -197,6 +207,11 @@
                         line-height: 24px;
                         letter-spacing: -0.03em;
                         color: rgba(17, 17, 17, 0.7);
+                        @media #{$xl} {
+                            br{
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -236,17 +251,25 @@
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
+            &:hover{
+                .post-thumb {
+                    img {
+                       transform: scale(1.2);
+                    }
+                }
+            }
 
             .post-thumb {
                 min-width: 166px;
                 border-radius: 10px;
                 overflow: hidden;
-
+                transition: all .3s ease-in-out;
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 10px;
+                    transition: all .3s ease-in-out;
                 }
             }
 
