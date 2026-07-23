@@ -68,6 +68,9 @@
 .gy-40 {
 	--bs-gutter-y: 40px;
 }
+.mb-20{
+  margin-bottom: 20px;
+}
 
 /* === section scss (index 03) === */
 header {
@@ -114,6 +117,15 @@ section {
   @media #{$sm,$xs} {
     padding-top: 60px;
   }
+}
+.section-space-top-100 {
+  padding-top: 100px;
+
+  @media #{$lg} {
+    padding-top: 80px;
+  }
+
+
 }
 
 .section-space-bottom {

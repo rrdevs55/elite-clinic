@@ -144,6 +144,18 @@
     color: var(--secondary);
     transition: all .3s ease-in-out;
   }
+  span{
+    background: #FFFFFF;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    transition: all .3s ease-in-out;
+
+  }
 
   &:hover {
     i {
