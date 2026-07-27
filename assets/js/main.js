@@ -745,6 +745,50 @@
   });
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".progress-outer");
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const outer = entry.target;
+  
+          const bar = outer.querySelector(".progress-bar");
+          const num = outer.querySelector(".progress-num");
+          const value = bar.dataset.width;
+          bar.style.width = value + "%";
+          num.innerText = `-${value}%`;
+  
+          num.style.left = `calc(${value}% )`;
+  
+          observer.unobserve(outer);
+        }
+      });
+    }, { threshold: 0.3 });
+  
+    items.forEach((item) => observer.observe(item));
+  });
+
+
+  document.querySelectorAll('.hero-section__video').forEach(function (wrap) {
+    const video = wrap.querySelector('.video-el');
+    const btn = wrap.querySelector('.video-popup');
+  
+    btn.addEventListener('click', function () {
+      if (video.paused) {
+        video.play();
+        btn.classList.add('is-playing');
+      } else {
+        video.pause();
+        btn.classList.remove('is-playing');
+      }
+    });
+  
+    video.addEventListener('ended', function () {
+      btn.classList.remove('is-playing');
+    });
+  });
+
 
 
 })(jQuery);

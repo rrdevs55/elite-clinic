@@ -580,6 +580,15 @@
         @media #{$md} {
             transform: translateY(-0px);
         }
+        .theme-btn {
+            p{
+                position: relative;
+                z-index: 1;
+            }
+            &:hover {
+                color: var(--white);
+            }
+        }
     }
 
     &__wrapper {
