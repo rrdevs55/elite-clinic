@@ -1361,6 +1361,125 @@
 }
 
 // header-area-2
+.header-5 {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 0 40px;
+
+        @media #{$lg} {
+            height: 80px;
+        }
+
+    }
+
+    &__box {
+        display: inline-flex;
+        gap: 203px;
+        align-items: center;
+
+        @media #{$xl} {
+            gap: 60px;
+        }
+    }
+
+
+
+    .sticky,
+    .transformed {
+        background-color: #FCF7F3;
+    }
+
+
+    .main-menu li a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        padding: 35px 15px;
+        color: var(--secondary);
+        font-family: var(--font_dm-sans);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    &__navicon {
+        display: flex;
+        background: var(--white);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+
+    &__button {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+
+        .rr-btn {
+            padding: 16.5px 30.4px;
+            background: url(.png), #111111;
+            background-blend-mode: plus-lighter, normal;
+            border-radius: 12px;
+            &::before{
+                background: var(--primary);
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
+
+            .btn-wrap {
+                .text-one {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1;
+                    letter-spacing: -0.03em;
+                    color: #FFFFFF;
+                    font-family: var(--font_dm-sans);
+
+                    i {
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+
+                .text-two {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1;
+                    letter-spacing: -0.03em;
+                    color: #FFFFFF;
+                    font-family: var(--font_dm-sans);
+
+                    i {
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+}
+// header-area-2
 .header-inner {
     position: absolute;
     top: 20px;
