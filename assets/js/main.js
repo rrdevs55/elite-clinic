@@ -156,39 +156,6 @@
   }
 
 
-  //fade-top gsap animation
-  if ($(".fade-wrapper").length > 0) {
-    $(".fade-wrapper").each(function () {
-      var section = $(this);
-      var fadeItems = section.find(".fade-top");
-
-      fadeItems.each(function (index, element) {
-        var delay = index * 0.15;
-
-        gsap.set(element, {
-          opacity: 0,
-          y: 100,
-        });
-
-        ScrollTrigger.create({
-          trigger: element,
-          start: "top 100%",
-          end: "bottom 60%",
-          toggleActions: "play none none reverse",
-          scrub: 0.5,
-          onEnter: function () {
-            gsap.to(element, {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              delay: delay,
-            });
-          },
-          once: true,
-        });
-      });
-    });
-  }
 
   document.querySelectorAll("[data-background]").forEach((el) => {
     el.style.backgroundImage = `url(${el.getAttribute("data-background")})`;

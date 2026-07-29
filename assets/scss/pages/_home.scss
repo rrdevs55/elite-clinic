@@ -1145,7 +1145,7 @@
         border-radius: 30px;
         position: relative;
         padding: 40px;
-
+        overflow: hidden;
         @media #{$xl} {
             margin: 0 15px;
             padding: 20px;
@@ -2579,3 +2579,44 @@
     }
 }
 
+.gradient-border-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 32px 8px 8px;
+    border-radius: 9999px;
+    /* পুরোপুরি গোল বাটন (Pill shape) */
+
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #111827;
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#add5fa, #add5fa) padding-box,
+        linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 40%, #88a5c2 100%) border-box;
+}
+
+/* ভেতরের সাদা গোল বাটন */
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* আইকন (প্লে বাটন) */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 14px solid #111827;
+    margin-left: 3px;
+}
