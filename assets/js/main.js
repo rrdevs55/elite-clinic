@@ -756,6 +756,46 @@
     });
   });
 
+  var work_section_active = new Swiper(".before-after-4__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+  
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+  
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+  
+      // 👉 CUSTOM STRUCTURE
+      renderFraction: function (currentClass, totalClass) {
+        return `
+          <span class="${currentClass}"></span>
+          <span class="divider">/</span>
+          <span class="${totalClass}"></span>
+        `;
+      },
+  
+      // 👉 01 format
+      formatFractionCurrent: function (number) {
+        return number < 10 ? "0" + number : number;
+      },
+  
+      formatFractionTotal: function (number) {
+        return number < 10 ? "0" + number : number;
+      },
+    },
+  
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  });
 
 
 })(jQuery);
