@@ -110,22 +110,10 @@
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <!-- Header area start -->
-      <header class="header-area-2">
+      <header class="header-area">
         <div class="container rr-container-1544">
           <div class="header-main">
-            <div class="top-bar-inner">
-              <div class="top-bar-left">
-                <p class="text"><span>Help Line:</span> Emergency Support 24/7</p>
-              </div>
-              <div class="top-bar-right">
-                <ul class="social-list">
-                  <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                  <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
-                  <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin-in"></i>Linkedin</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="header-area-2__inner">
+            <div class="header-area__inner">
               <div class="header__logo">
                 <a href="index.html">
                   <img src="assets/imgs/logo/logo.svg" class="normal-logo" alt="Site Logo">
@@ -183,12 +171,38 @@
                   </nav>
                 </div>
                 <div class="header__button">
-                  <a href="contact.html" class="rr-btn">
-                    <span class="btn-wrap">
-                      <span class="text-one">Make An Appointment</span>
-                      <span class="text-two">Make An Appointment</span>
-                    </span>
-                  </a>
+                  <div class="top-bar-right">
+                    <div class="top-bar-social">
+                      <h2 class="title">Follow Us:</h2>
+                      <ul class="social-list">
+                        <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                      </ul>
+
+                    </div>
+                    <div class="country-list">
+                      <div class="custom-select">
+                        <div class="selected">
+                          <img src="assets/imgs/home-1/english-flag.png" alt="flag">
+                          <span>English</span>
+                          <i class="fa-light fa-angle-down"></i>
+                        </div>
+                        <ul class="dropdown">
+                          <li>
+                            <img src="assets/imgs/home-1/english-flag.png"> English
+                          </li>
+                          <li>
+                            <img src="https://flagcdn.com/w20/fr.png"> French
+                          </li>
+                          <li>
+                            <img src="https://flagcdn.com/w20/sa.png"> Arabic
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                   <div class="header__navicon ">
                     <div class="side-toggle">
                       <a class="bar-icon" href="javascript:void(0)">
@@ -202,47 +216,79 @@
               </div>
 
             </div>
-          </div>
-        </div>
-        <div class="header__bottom-contact">
-          <div class="container rr-container-1544">
-            <div class="header__bottom-info">
-              <div class="header__info-item">
-                <div class="header__info-icon"><i class="fas fa-envelope"></i></div>
-                <div class="header__info-content">
-                  <span class="header__info-title">MAIL ANYTIME</span>
-                  <p class="header__info-text"><a href="mailto:info@eliteclinic.com">info@eliteclinic.com</a></p>
+            <div class="appointment">
+              <form id="appointment-form" action="mail.php" method="post">
+                <div class="appointment__form-group">
+                  <div class="appointment__input ">
+                    <div class="appointment__icon">
+                      <i class="fa-light fa-user"></i>
+                    </div>
+                    <input type="text" name="name" placeholder="Full Name">
+                  </div>
+                  <div class="appointment__input">
+                    <div class="appointment__icon">
+                      <i class="fa-light fa-phone"></i>
+                    </div>
+                    <input type="text" name="name" placeholder="Phone Number">
+                  </div>
+                  <div class="appointment__input">
+                    <div class="appointment__icon">
+                      <i class="fa-light fa-calendar"></i>
+                    </div>
+                    <input type="date" name="date">
+                  </div>
+                  <div class="appointment__select">
+                    <div class="nice-select select-control country" tabindex="0">
+                      <div class="icon ">
+                        <i class="fa-light fa-angle-down"></i>
+                      </div>
+                      <span class="current">Select Time</span>
+                      <ul class="list">
+                        <li data-value="" class="option selected focus">Select Time</li>
+                        <li class="option">09:00 AM</li>
+                        <li class="option">10:00 AM</li>
+                        <li class="option">11:00 AM</li>
+                      </ul>
+                      <div class="appointment__icon">
+                        <i class="fa-light fa-clock"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="appointment__select">
+                    <div class="nice-select select-control country" tabindex="0">
+                      <div class="icon ">
+                        <i class="fa-light fa-angle-down"></i>
+                      </div>
+                      <span class="current">Select Treatment</span>
+                      <ul class="list">
+                        <li data-value="" class="option selected focus">Select Treatment</li>
+                        <li class="option">Dental Checkup</li>
+                        <li class="option">Teeth Cleaning</li>
+                        <li class="option">General Consultatio</li>
+                      </ul>
+                      <div class="appointment__icon">
+                        <i class="fa-light fa-tooth"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="theme-btn">
+                    Send Appointment
+                    <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 6.75L14.8316 6.75" stroke="#2F80ED" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" fill="white" />
+                        <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" stroke="#2F80ED" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
                 </div>
-              </div>
-              <div class="header__info-item">
-                <div class="header__info-icon"><i class="fas fa-phone"></i></div>
-                <div class="header__info-content">
-                  <span class="header__info-title">FREE TO CALL</span>
-                  <p class="header__info-text"><a href="tel:+15659876543">+1 (555) 987-6543</a></p>
-                </div>
-              </div>
-              <div class="header__info-item">
-                <div class="header__info-icon"><i class="fas fa-clock"></i></div>
-                <div class="header__info-content">
-                  <span class="header__info-title">SERVICE HOURS</span>
-                  <p class="header__info-text">Mon–Fri: 8:00–18:00</p>
-                </div>
-              </div>
-              <div class="header__info-item">
-                <div class="header__info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="header__info-content">
-                  <span class="header__info-title">OUR LOCATIONS</span>
-                  <p class="header__info-text"><a
-                      href="https://www.google.com/maps/search/?api=1&query=456+Elm+St,+IL+62704" target="_blank">456
-                      Elm
-                      Street, IL 62704</a></p>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
+
       </header>
       <!-- Header area end -->
 
@@ -251,7 +297,7 @@
 
         <!-- hero area start -->
         <section class="hero-section">
-          <div class="hero-section__wrapper" data-background="assets/imgs/home-1/hero-bg.png" >
+          <div class="hero-section__wrapper" data-background="assets/imgs/home-1/hero-bg.png">
             <div class="container rr-container-1544">
               <div class="hero-section__inner">
                 <div class="hero-section__wrap">
@@ -260,31 +306,43 @@
                     <h2 class="sub-title">1K+ patients treated</h2>
                     <h2 class="title rr-title-anim-3">Creating Confidence with Beautiful Smiles</h2>
                     <ul class="hero-section__list">
-                      <li><span><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.192614 0.0229227C0.309487 -0.023577 0.443192 0.00192281 0.532328 0.0880222L1.15566 0.688018C1.27752 0.805317 1.27752 0.994916 1.15566 1.11222C1.0338 1.22951 0.836823 1.22951 0.714962 1.11222L0.623646 1.02432V2.40011H2.8053C2.88789 2.40011 2.96736 2.43161 3.02564 2.48801L6.94825 6.26378L7.70342 6.09608C8.04126 6.02138 8.39999 6.12038 8.64527 6.35618L14.1998 11.7027L13.0008 14.5056L5.81847 7.59247C5.63552 7.41607 5.56602 7.15747 5.6377 6.91778C5.70908 6.67808 5.91041 6.49418 6.16317 6.43808L6.23205 6.42278L2.67596 3.0001H0.311669C0.13963 3.0001 4.76837e-06 2.8657 4.76837e-06 2.7001V0.300121C4.76837e-06 0.178922 0.0760508 0.0694223 0.192614 0.0229227Z" fill="#4BB1FA"/>
-                        <path d="M15.4996 12.9526L14.2517 15.7084L13.479 14.9647L14.678 12.1621L15.4996 12.9526Z" fill="#4BB1FA"/>
-                        <path d="M16.7818 14.1852L15.494 16.9026L14.7264 16.1637L15.9743 13.4082L16.7818 14.1852Z" fill="#4BB1FA"/>
-                        <path d="M18.2613 15.6113C18.5359 15.8753 18.6871 16.2266 18.6871 16.6004C18.6871 16.9742 18.5359 17.3255 18.2613 17.5895C17.9867 17.8534 17.6218 17.9992 17.2335 17.9992C16.8454 17.9992 16.4805 17.8537 16.2059 17.5895L15.9631 17.3558L17.2509 14.6387L18.2613 15.6113Z" fill="#4BB1FA"/>
-                        </svg>
+                      <li><span><svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.192614 0.0229227C0.309487 -0.023577 0.443192 0.00192281 0.532328 0.0880222L1.15566 0.688018C1.27752 0.805317 1.27752 0.994916 1.15566 1.11222C1.0338 1.22951 0.836823 1.22951 0.714962 1.11222L0.623646 1.02432V2.40011H2.8053C2.88789 2.40011 2.96736 2.43161 3.02564 2.48801L6.94825 6.26378L7.70342 6.09608C8.04126 6.02138 8.39999 6.12038 8.64527 6.35618L14.1998 11.7027L13.0008 14.5056L5.81847 7.59247C5.63552 7.41607 5.56602 7.15747 5.6377 6.91778C5.70908 6.67808 5.91041 6.49418 6.16317 6.43808L6.23205 6.42278L2.67596 3.0001H0.311669C0.13963 3.0001 4.76837e-06 2.8657 4.76837e-06 2.7001V0.300121C4.76837e-06 0.178922 0.0760508 0.0694223 0.192614 0.0229227Z"
+                              fill="#4BB1FA" />
+                            <path d="M15.4996 12.9526L14.2517 15.7084L13.479 14.9647L14.678 12.1621L15.4996 12.9526Z"
+                              fill="#4BB1FA" />
+                            <path d="M16.7818 14.1852L15.494 16.9026L14.7264 16.1637L15.9743 13.4082L16.7818 14.1852Z"
+                              fill="#4BB1FA" />
+                            <path
+                              d="M18.2613 15.6113C18.5359 15.8753 18.6871 16.2266 18.6871 16.6004C18.6871 16.9742 18.5359 17.3255 18.2613 17.5895C17.9867 17.8534 17.6218 17.9992 17.2335 17.9992C16.8454 17.9992 16.4805 17.8537 16.2059 17.5895L15.9631 17.3558L17.2509 14.6387L18.2613 15.6113Z"
+                              fill="#4BB1FA" />
+                          </svg>
                         </span> Pain-free Tech</li>
                       <li><span><i class="fa-solid fa-phone-volume"></i></span>Emergency 24/7</li>
-                      <li><span>    <i class="fa-solid fa-shield-check"></i></span>Insurance Accepted</li>
+                      <li><span> <i class="fa-solid fa-shield-check"></i></span>Insurance Accepted</li>
                     </ul>
-                    <p class="decs">Personalized dental solutions designed to restore your oral health, protect your teeth from future concerns, and enhance the natural beauty of your smile  all delivered with advanced care, lasting comfort, and the confidence you deserve.</p>
+                    <p class="decs">Personalized dental solutions designed to restore your oral health, protect your
+                      teeth from future concerns, and enhance the natural beauty of your smile all delivered with
+                      advanced care, lasting comfort, and the confidence you deserve.</p>
                     <div class="hero-section__btn">
                       <div class="hero-section__one">
                         <a href="case-studies.html" class="theme-btn ">
                           Book Appointment
-                          <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.75 6.75L14.8316 6.75" stroke="#2F80ED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" fill="white"/>
-                            <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" stroke="#2F80ED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                            </span>
+                          <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.75 6.75L14.8316 6.75" stroke="#2F80ED" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" fill="white" />
+                              <path d="M7.79083 0.75L14.8316 6.75L7.79083 12.75" stroke="#2F80ED" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
                         </a>
                       </div>
                       <div class="hero-section__two">
-                        <a  href="https://www.youtube.com/watch?v=aQovYvb6Lsg" class="theme-btn video-popup">
+                        <a href="https://www.youtube.com/watch?v=aQovYvb6Lsg" class="theme-btn video-popup">
                           <span><i class="fa-solid fa-play"></i></span>
                           Find a doctor
                         </a>
@@ -320,18 +378,20 @@
                         <video class="video-el" muted playsinline preload="metadata">
                           <source src="assets/imgs/home-1/hero-video.mp4" type="video/mp4">
                         </video>
-                        <h3 class="video-popup" >
+                        <h3 class="video-popup">
                           <i class="fa-solid fa-play"></i>
                         </h3>
                       </div>
                       <div class="hero-section__author">
                         <div class="icon">
-                          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 17H20V19H0V17ZM0 3L5 6L9.99999 0L15 6L20 3V15H0V3Z" fill="white"/>
-                            </svg>                            
+                          <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 17H20V19H0V17ZM0 3L5 6L9.99999 0L15 6L20 3V15H0V3Z" fill="white" />
+                          </svg>
                         </div>
                         <div class="content">
-                          <p class="decs">The best dental visit I’ve ever had — painless, professional, and so welcoming</p>
+                          <p class="decs">The best dental visit I’ve ever had — painless, professional, and so welcoming
+                          </p>
                           <h2 class="name">— Sadie Sink</h2>
                         </div>
                       </div>
@@ -563,22 +623,24 @@
             </div>
             <div class="why-choose-us__wrapper">
               <div class="why-choose-us__item-box">
-                <div class="why-choose-us__item"data-aos="fade-right" data-aos-duration="700" data-aos-delay="200">
+                <div class="why-choose-us__item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200">
                   <div class="why-choose-us__icon">
                     <img src="assets/imgs/icon/why-choose-us-icon-1.png" alt="icon">
                   </div>
                   <div class="why-choose-us__content">
                     <h2 class="title"><a href="case-details.html">Care with a Gentle Hand</a></h2>
-                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and comfortable care to every patient</p>
+                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and
+                      comfortable care to every patient</p>
                   </div>
                 </div>
-                <div class="why-choose-us__item"data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+                <div class="why-choose-us__item" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
                   <div class="why-choose-us__icon">
                     <img src="assets/imgs/icon/why-choose-us-icon-2.png" alt="icon">
                   </div>
                   <div class="why-choose-us__content">
                     <h2 class="title"><a href="case-details.html">Modern Dental Tech</a></h2>
-                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and comfortable care to every patient</p>
+                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and
+                      comfortable care to every patient</p>
                   </div>
                 </div>
               </div>
@@ -592,16 +654,18 @@
                   </div>
                   <div class="why-choose-us__content">
                     <h2 class="title"><a href="case-details.html">Care with a Gentle Hand</a></h2>
-                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and comfortable care to every patient</p>
+                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and
+                      comfortable care to every patient</p>
                   </div>
                 </div>
-                <div class="why-choose-us__item"data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+                <div class="why-choose-us__item" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
                   <div class="why-choose-us__icon">
                     <img src="assets/imgs/icon/why-choose-us-icon-4.png" alt="icon">
                   </div>
                   <div class="why-choose-us__content">
                     <h2 class="title"><a href="case-details.html">Smiles for Everyone</a></h2>
-                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and comfortable care to every patient</p>
+                    <p class="decs">At our clinic, advanced dental technology helps us provide precise, safe, and
+                      comfortable care to every patient</p>
                   </div>
                 </div>
               </div>
@@ -623,7 +687,9 @@
                   <div class="section-title__wrapper">
                     <h2 class="sub-title"><img src="assets/imgs/icon/star.png" alt="icon">Best Dentist</h2>
                     <h2 class="title ">About Dr. Charlie Heaton</h2>
-                    <p class="decs">Dr. Charlie Heaton combines professional expertise with a patient centered approach to deliver outstanding dental care. His focus on comfort precision and modern treatment techniques helps patients achieve healthier and more confident smiles</p>
+                    <p class="decs">Dr. Charlie Heaton combines professional expertise with a patient centered approach
+                      to deliver outstanding dental care. His focus on comfort precision and modern treatment techniques
+                      helps patients achieve healthier and more confident smiles</p>
                   </div>
                   <div class="best-dentist__author">
                     <div class="author-details">
@@ -633,10 +699,13 @@
                     <div class="best-dentist__btn">
                       <a href="case-studies.html" class="theme-btn ">
                         Appointment
-                        <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.75 6.75L12.75 6.75" stroke="#005A70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 0.75L12.75 6.75L6.75 12.75" fill="white"/>
-                          <path d="M6.75 0.75L12.75 6.75L6.75 12.75" stroke="#005A70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 6.75L12.75 6.75" stroke="#005A70" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M6.75 0.75L12.75 6.75L6.75 12.75" fill="white" />
+                            <path d="M6.75 0.75L12.75 6.75L6.75 12.75" stroke="#005A70" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
                           </svg>
                         </span>
                       </a>
@@ -697,34 +766,33 @@
                       <p class="text">Pediatric Dentist</p>
                       <h3 class="rating"><i class="fa-solid fa-star"></i>(5.0 Rating)</h3>
                     </div>
-                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years of experience</p>
+                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years
+                      of experience</p>
                   </div>
                   <div class="team-section__progress">
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Pediatric dentistry</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Pediatric dentistry</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Patient Comfort</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Patient Comfort</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                   <div class="team-section__btn">
                     <a href="doctor-details.html" class="rr-btn">
                       <span class="btn-wrap">
@@ -744,34 +812,33 @@
                       <p class="text">Pediatric Dentist</p>
                       <h3 class="rating"><i class="fa-solid fa-star"></i>(5.0 Rating)</h3>
                     </div>
-                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years of experience</p>
+                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years
+                      of experience</p>
                   </div>
                   <div class="team-section__progress">
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Pediatric dentistry</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Pediatric dentistry</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Patient Comfort</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Patient Comfort</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                   <div class="team-section__btn">
                     <a href="doctor-details.html" class="rr-btn">
                       <span class="btn-wrap">
@@ -782,7 +849,7 @@
                   </div>
                 </div>
               </div>
-              <div class="team-section__item"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="team-section__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <img src="assets/imgs/home-1/team-img-3.jpg" alt="img not found">
                 <div class="team-section__box">
                   <div class="team-section__content">
@@ -791,34 +858,33 @@
                       <p class="text">Pediatric Dentist</p>
                       <h3 class="rating"><i class="fa-solid fa-star"></i>(5.0 Rating)</h3>
                     </div>
-                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years of experience</p>
+                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years
+                      of experience</p>
                   </div>
                   <div class="team-section__progress">
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Pediatric dentistry</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Pediatric dentistry</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Patient Comfort</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Patient Comfort</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                   <div class="team-section__btn">
                     <a href="doctor-details.html" class="rr-btn">
                       <span class="btn-wrap">
@@ -838,34 +904,33 @@
                       <p class="text">Pediatric Dentist</p>
                       <h3 class="rating"><i class="fa-solid fa-star"></i>(5.0 Rating)</h3>
                     </div>
-                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years of experience</p>
+                    <p class="decs">Specializing in pediatric dentistry and patient comfort Dr. Moriarty brings 30 years
+                      of experience</p>
                   </div>
                   <div class="team-section__progress">
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Pediatric dentistry</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Pediatric dentistry</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <div class="team-section__progress__item  ">
-                        <div class="team-section__progress__wrap">
-                            <label>Patient Comfort</label>
-                            <div class="progress-outer">
-                                <span class="progress-num progress-num-2"
-                                    style="left: calc(100% - 33px);">-90%</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-2" data-width="90"></div>
-                                </div>
-                            </div>
+                      <div class="team-section__progress__wrap">
+                        <label>Patient Comfort</label>
+                        <div class="progress-outer">
+                          <span class="progress-num progress-num-2" style="left: calc(100% - 33px);">-90%</span>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-2" data-width="90"></div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                   <div class="team-section__btn">
                     <a href="doctor-details.html" class="rr-btn">
                       <span class="btn-wrap">
@@ -881,11 +946,13 @@
               <a href="doctor-details.html " class="theme-btn ">
                 See a Doctor Today
                 <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.75 6.75L12.75 6.75" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.75 0.75L12.75 6.75L6.75 12.75" fill="white"/>
-                  <path d="M6.75 0.75L12.75 6.75L6.75 12.75" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M0.75 6.75L12.75 6.75" stroke="#111111" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.75 0.75L12.75 6.75L6.75 12.75" fill="white" />
+                    <path d="M6.75 0.75L12.75 6.75L6.75 12.75" stroke="#111111" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                  </span>
+                </span>
               </a>
             </div>
           </div>
@@ -907,7 +974,9 @@
                   <h2 class="name">Porcelain Veneers</h2>
                 </div>
               </div>
-              <p class="text">“I had a wonderful experience with the entire team. They were kind and patient, taking the time to explain everything so I felt relaxed and comfortable. The care they provided was exceptional, and the results gave me a confident smile I truly love.”</p>
+              <p class="text">“I had a wonderful experience with the entire team. They were kind and patient, taking the
+                time to explain everything so I felt relaxed and comfortable. The care they provided was exceptional,
+                and the results gave me a confident smile I truly love.”</p>
             </div>
             <div class="before-after__inner" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
               <div class="filter__media filter__container">
@@ -950,7 +1019,7 @@
         </section>
 
         <div class="cta-section">
-          <div class="cta-section__wrapper " data-background="assets/imgs/home-1/cta-bg-img.png" >
+          <div class="cta-section__wrapper " data-background="assets/imgs/home-1/cta-bg-img.png">
             <div class="cta-section__inner">
               <div class="cta-section__media">
                 <div class="icon">
@@ -1112,7 +1181,7 @@
               <h2 class="title rr-title-anim-3">Trusted by Thousands</h2>
             </div>
             <div class="stats-section__inner">
-              <div class="stats-section__google"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="stats-section__google" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <div class="stats-section__box">
                   <div class="logo">
                     <img src="assets/imgs/icon/google-1.png" alt="icon">
@@ -1130,17 +1199,38 @@
                   <p class="decs">Based to Google Reviews</p>
                 </div>
               </div>
-              <div class="stats-section__card"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="stats-section__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <h2><span class="odometer" data-count="7000">0</span>+</h2>
                 <p class="decs">Where Patients Leave Happier</p>
               </div>
-              <div class="stats-section__card"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="stats-section__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <h2><span class="odometer" data-count="98">0</span>%</h2>
                 <p class="decs">Committed to Patient Satisfaction</p>
               </div>
-              <div class="stats-section__card"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="stats-section__card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <h2><span class="odometer" data-count="97">0</span>%</h2>
                 <p class="decs">Positive Feedback</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="emergency-section section-space-top">
+          <div class="container rr-container-1544">
+            <div class="emergency-section__wrapper" data-background="assets/imgs/home-1/emergency-bg.png">
+              <div class="emergency-section__content">
+                <h2 class="title">24/7 emergency dental care</h2>
+                <p class="decs">Severe pain? Broken tooth? </p>
+                <div class="emergency-section__btn">
+                  <a href="tel:" class="rr-btn">
+                    <span class="btn-wrap">
+                      <span class="text-one"><i class="fa-regular fa-phone-volume"></i>Call Now – Immediate
+                        Assistance</span>
+                      <span class="text-two"><i class="fa-regular fa-phone-volume"></i>Call Now – Immediate
+                        Assistance</span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1168,7 +1258,7 @@
             </div>
             <div class="row gx-20 gy-24 ">
               <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="blog-section__item"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <div class="blog-section__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                   <div class="blog-section__thumb">
                     <a href="blog-details.html"><img src="assets/imgs/home-1/blog-img-1.jpg" alt="img not found"></a>
                     <span><a class="tag" href="#">Dental Care</a></span>
@@ -1198,7 +1288,8 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="blog-section__item blog-section__item-2"data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <div class="blog-section__item blog-section__item-2" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="200">
                   <div class="blog-section__thumb">
                     <a href="blog-details.html"><img src="assets/imgs/home-1/blog-img-2.jpg" alt="img not found"></a>
                     <span><a class="tag" href="#">Teeth Whiteninge</a></span>
@@ -1226,7 +1317,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="blog-section__item blog-section__item-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <div class="blog-section__item blog-section__item-2" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="200">
                   <div class="blog-section__thumb">
                     <a href="blog-details.html"><img src="assets/imgs/home-1/blog-img-3.jpg" alt="img not found"></a>
                     <span><a class="tag" href="#">Kids</a></span>
