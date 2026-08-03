@@ -820,6 +820,38 @@
   });
 
 
+  var our_services_active = new Swiper(".our-services__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".our-services-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+
+      1400: {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+
 })(jQuery);
 
 
