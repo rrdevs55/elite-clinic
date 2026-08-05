@@ -9,7 +9,6 @@
   "use strict";
 
 
-
   /* === rr-btn-primary (index) === */
   const buttons = document.querySelectorAll(".rr-btn-primary");
   buttons.forEach(button => {
@@ -229,67 +228,39 @@
     },
   });
 
-  // var work_section_active = new Swiper(".team-3__active", {
-  //   spaceBetween: 11,
-  //   loop: true, 
-  //   autoplay: true,
-  //   speed: 2000,
-  //   navigation: {
-  //     nextEl: ".rr-button-next",
-  //     prevEl: ".rr-button-prev",
-  //   },
-  //   pagination: {
-  //     el: ".testimonials-3-pagination",
-  //     type: "progressbar",
-  //   },
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 2,
-  //     },
-  //     576: {
-  //       slidesPerView: 4,
-  //     },
-  //     768: {
-  //       slidesPerView: 4,
-  //     },
-  //     1400: {
-  //       slidesPerView: 4,
-  //       slidesPerGroup: 1,
-  //     },
-  //   },
-  // });
-
-  $('.team-3__active').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    speed: 2000,
+  var work_section_active = new Swiper(".team-3__active", {
+    spaceBetween: 11,
+    loop: false, 
     autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: true,
-    prevArrow: '.rr-button-prev',
-    nextArrow: '.rr-button-next',
-    dots: true,
-    appendDots: $('.team-3-pagination'),
-  
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: { slidesToShow: 4 }
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".testimonials-3-pagination",
+      type: "progressbar",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
       },
-      {
-        breakpoint: 993,
-        settings: { slidesToShow: 3 }
+      576: {
+        slidesPerView: 4,
       },
-      {
-        breakpoint: 576,
-        settings: { slidesToShow: 2 }
+      768: {
+        slidesPerView: 4,
       },
-      {
-        breakpoint: 320,
-        settings: { slidesToShow: 1 }
-      }
-    ]
+      1400: {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+      },
+    },
   });
+
+
+
+
 
 
 
