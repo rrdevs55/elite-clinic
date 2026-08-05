@@ -362,4 +362,25 @@ img.mfp-img {
   height: 50px;
   margin-top: -18px;
   opacity: 1;
+
+}
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  color: #FFF;
+  right: -6px;
+  width: 50px;
+  background: #1C1D20;
+  text-align: center;
+  line-height: 50px;
+  padding: 0;
+  height: 50px;
+  margin-top: -18px;
+  opacity: 1;
+  &::after {
+    content: "\e59b";
+    top: 0;
+    left: 20px;
+    font-size: 16px;
+    position: absolute;
+    font-family: var(--font_awesome);
+  }
 }

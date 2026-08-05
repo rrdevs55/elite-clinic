@@ -229,6 +229,70 @@
     },
   });
 
+  // var work_section_active = new Swiper(".team-3__active", {
+  //   spaceBetween: 11,
+  //   loop: true, 
+  //   autoplay: true,
+  //   speed: 2000,
+  //   navigation: {
+  //     nextEl: ".rr-button-next",
+  //     prevEl: ".rr-button-prev",
+  //   },
+  //   pagination: {
+  //     el: ".testimonials-3-pagination",
+  //     type: "progressbar",
+  //   },
+  //   breakpoints: {
+  //     320: {
+  //       slidesPerView: 2,
+  //     },
+  //     576: {
+  //       slidesPerView: 4,
+  //     },
+  //     768: {
+  //       slidesPerView: 4,
+  //     },
+  //     1400: {
+  //       slidesPerView: 4,
+  //       slidesPerGroup: 1,
+  //     },
+  //   },
+  // });
+
+  $('.team-3__active').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+    prevArrow: '.rr-button-prev',
+    nextArrow: '.rr-button-next',
+    dots: true,
+    appendDots: $('.team-3-pagination'),
+  
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: { slidesToShow: 4 }
+      },
+      {
+        breakpoint: 993,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 576,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 320,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  });
+
+
+
 
   var work_section_active = new Swiper(".work-section-3__active", {
     spaceBetween: 20,
@@ -262,6 +326,37 @@
   });
 
 
+  
+  var testimonial_section_active = new Swiper(".testimonial-3__active", {
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    speed: 2000,
+    slidesPerView: "auto",
+    direction: "vertical",
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".testimonials-3-pagination",
+      type: "progressbar",
+    },
+    
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+
+
+  
 
   $(function () {
     let pricingMonthlyBtn = $("#Monthly"),
@@ -700,6 +795,32 @@
   });
 
 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.team-section-3__video').forEach(function (wrap) {
+      const video = wrap.querySelector('.video-el');
+      const btn = wrap.querySelector('.video-popup');
+  
+      if (!video || !btn) return;
+  
+      btn.addEventListener('click', function () {
+        if (video.paused) {
+          video.play();
+          btn.classList.add('is-playing');
+        } else {
+          video.pause();
+          btn.classList.remove('is-playing');
+        }
+      });
+  
+      video.addEventListener('ended', function () {
+        btn.classList.remove('is-playing');
+      });
+    });
+  });
+
+
+
   /* image compare js ***/
   var ctrl = jQuery('.filter__container .comparison-ctrl');
   var pic_right = jQuery('.filter__container .pic--right');
@@ -850,6 +971,8 @@
       },
     },
   });
+
+
 
 
 })(jQuery);
