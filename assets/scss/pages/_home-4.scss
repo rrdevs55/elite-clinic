@@ -727,6 +727,109 @@
             font-family: var(--font_dm-sans);
         }
     }
+
+    &__privacy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 19px 20px; 
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        border-radius: 20px;
+        margin-top: 35px;
+        @media #{$xs} {
+            padding: 19px 15px; 
+        }
+        .privacy {
+            &__info {
+                display: flex;
+                align-items: center;
+                gap: 31px;
+                flex-wrap: wrap;
+                @media #{$lg} {
+                    gap: 10px;
+                }
+                .text {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.02em;
+                    color: rgba(17, 17, 17, 0.7);
+                    font-family: var(--font_dm-sans);
+                }
+            }
+
+            &__content {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    right: -16px;
+                    height: 100%;
+                    width: 1px;
+                    top: 0;
+                    background: rgba(17, 17, 17, 0.1);
+                    @media #{$lg} {
+                        display: none;
+                    }
+                }
+
+                .decs {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.02em;
+                    color: var(--secondary);
+                    font-family: var(--font_dm-sans);
+                }
+            }
+            &__btn{
+                .rr-btn {
+                    background: #68511E;
+                    border-radius: 12px;
+                    padding: 16.5px 30px;
+                    @media #{$xs} {
+                        padding: 16.5px 15px;
+                    }
+                    .btn-wrap {
+                        .text-one {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 1;
+                            letter-spacing: -0.03em;
+                            color: var(--white);
+                            font-family: var(--font_dm-sans);
+        
+                            i {
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+                        }
+        
+                        .text-two {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 1;
+                            letter-spacing: -0.03em;
+                            color: var(--white);
+                            font-family: var(--font_dm-sans);
+        
+                            i {
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 // pricing-4 css
@@ -4002,4 +4105,3 @@
         }
     }
 }
-

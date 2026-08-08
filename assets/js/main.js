@@ -8,7 +8,90 @@
 (function ($) {
   "use strict";
 
+  (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+  
+      // ---------------- Checkbox toggle ----------------
+      const checkboxes = document.querySelectorAll('.growth-tracker-2__checkbox');
+      checkboxes.forEach(function (box) {
+        box.addEventListener('click', function () {
+          box.classList.toggle('is-checked');
+        });
+      });
+  
+      // ---------------- Scroll-as-pagination ----------------
+      // NOTE: list ta id na, class diye select kora hocche (.growth-tracker-2__list)
+      const list = document.querySelector('.growth-tracker-2__list');
+      const track = document.getElementById('careScrollbar');
+      const thumb = document.getElementById('careScrollThumb');
+  
+      if (!list || !track || !thumb) return;
+  
+      let isDragging = false;
+      let dragStartY = 0;
+      let dragStartScrollTop = 0;
+  
+      function updateThumb() {
+        const visibleRatio = list.clientHeight / list.scrollHeight;
+        const trackHeight = track.clientHeight;
+  
+        const thumbHeight = Math.max(visibleRatio * trackHeight, 24);
+        thumb.style.height = thumbHeight + 'px';
+  
+        const maxScroll = list.scrollHeight - list.clientHeight;
+        const scrollRatio = maxScroll > 0 ? list.scrollTop / maxScroll : 0;
+        const maxThumbTravel = trackHeight - thumbHeight;
+        thumb.style.top = (scrollRatio * maxThumbTravel) + 'px';
+  
+        track.style.opacity = maxScroll > 0 ? '1' : '0';
+      }
+  
+      list.addEventListener('scroll', updateThumb);
+  
+      track.addEventListener('click', function (e) {
+        if (e.target === thumb) return;
+        const trackRect = track.getBoundingClientRect();
+        const clickY = e.clientY - trackRect.top;
+        const thumbHeight = thumb.offsetHeight;
+        const maxThumbTravel = track.clientHeight - thumbHeight;
+        const targetTop = Math.min(Math.max(clickY - thumbHeight / 2, 0), maxThumbTravel);
+        const scrollRatio = maxThumbTravel > 0 ? targetTop / maxThumbTravel : 0;
+        const maxScroll = list.scrollHeight - list.clientHeight;
+        list.scrollTo({ top: scrollRatio * maxScroll, behavior: 'smooth' });
+      });
+  
+      thumb.addEventListener('mousedown', function (e) {
+        isDragging = true;
+        dragStartY = e.clientY;
+        dragStartScrollTop = list.scrollTop;
+        document.body.style.userSelect = 'none';
+      });
+  
+      document.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+        const trackHeight = track.clientHeight;
+        const thumbHeight = thumb.offsetHeight;
+        const maxThumbTravel = trackHeight - thumbHeight;
+        const maxScroll = list.scrollHeight - list.clientHeight;
+  
+        const deltaY = e.clientY - dragStartY;
+        const deltaScroll = maxThumbTravel > 0 ? (deltaY / maxThumbTravel) * maxScroll : 0;
+        list.scrollTop = dragStartScrollTop + deltaScroll;
+      });
+  
+      document.addEventListener('mouseup', function () {
+        isDragging = false;
+        document.body.style.userSelect = '';
+      });
+  
+      updateThumb();
+      window.addEventListener('resize', updateThumb);
+    });
+  })();
+   
 
+
+  
   /* === rr-btn-primary (index) === */
   const buttons = document.querySelectorAll(".rr-btn-primary");
   buttons.forEach(button => {
@@ -260,7 +343,52 @@
 
 
 
+  var testimonial_3_active = new Swiper(".testimonials-5__active", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    // autoplay: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".rr-button-next",
+      prevEl: ".rr-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
 
+      1400: {
+        slidesPerView: 5,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.technology-5__item');
+  
+    items.forEach(item => {
+      item.addEventListener('mouseenter', function () {
+        items.forEach(i => i.classList.remove('is-active'));
+        item.classList.add('is-active');
+      });
+    });
+  });
 
 
 
@@ -942,6 +1070,9 @@
       },
     },
   });
+
+
+  
 
 
 
